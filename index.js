@@ -30,6 +30,10 @@ app.delete('/deleteByIndex', deleteByIndex);
 
 
 const PORT = process.env.PORT || 3000;
+app.get("/",(req,res)=>{
+  res.setHeader("Access-Control-Allow-Credentials","true");
+                res.send("API is running ...");
+});
 
 app.listen(PORT, () => {
   console.log(`App is listening on port http://localhost:${PORT}`);
